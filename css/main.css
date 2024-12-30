@@ -104,13 +104,18 @@ body {
   font-size: calc(var(--index) * 0.71);
   letter-spacing: -0.02vw;
   padding: calc(var(--index) * 0.7) calc(var(--index) * 1.25);
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(110px);
   color: #fff;
   border-radius: 10em;
-  border: rgb(255 255 255 / 0.4) 3px solid;
+  border: rgba(255, 255, 255, 0.582) 3px solid;
   outline: none;
   cursor: pointer;
   margin-top: calc(var(--index) * 2.5);
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .button-start:hover {
@@ -119,11 +124,6 @@ body {
 	transition: border-color 0.5s ease, opacity 0.5s ease;
 	animation: pulse 0.5s 1;
 	opacity: 1;
-}
-
-.button-start {
-	opacity: 0.7;
-	transition: opacity 0.5s ease;
 }
 
 .button-start:hover {
@@ -176,7 +176,7 @@ body {
 
 /* NAVBAR */
 .navbar {
-  font-size:large;
+  font-size: 1.1em;
   position: absolute;
   top: 0;
   left: 0;
@@ -184,8 +184,13 @@ body {
   display: flex;
   justify-content: space-between;
   z-index: 2;
-  margin: 25px 40%;
+  margin: 15px 35%;
+  padding: 15px 60px;
   transition: transform 0.3s ease;
+  border-radius: 30px;
+  background: rgba(198, 255, 205, 0.4);
+  border-bottom: 2px solid rgba(113, 255, 120, 0.2);
+  backdrop-filter: blur(2px);
 }
 
 .navbar:hover {
@@ -198,7 +203,7 @@ body {
   color: white;
   text-align: center;
   text-decoration: none;
-  text-shadow: 0 0 15px #03470a;
+  text-shadow: 0 0 25px #023307;
   background-color: transparent;
   transition: transform 0.3s ease;
 }
